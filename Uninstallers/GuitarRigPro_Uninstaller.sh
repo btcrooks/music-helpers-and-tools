@@ -1,24 +1,37 @@
 #!/usr/bin/env sh
 
-# Script Setup
+# Instructions
+
+# Step 1: Set the version
+VERSION=6 # works with versions 6, 5, and 4.
+
+# Step 2: run the script
+# `sudo ./GuitarRigPro_Uninstaller.sh`
+
+
+
+# Do not change anything below this line... unless you know what you're doing.
+# ----------------------------------------------------------------------------
+
+# Set Home Directory
 HOME=$(eval echo ~$USER)
 
 # Files
 applicationFiles=(
-  /Library/Preferences/com.native-instruments.Guitar\ Rig\ 6.plist
-  /Applications/Native\ Instruments/Guitar\ Rig\ 6
+  /Library/Preferences/com.native-instruments.Guitar\ Rig\ $VERSION.plist
+  /Applications/Native\ Instruments/Guitar\ Rig\ $VERSION
 )
 pluginFiles=(
-  /Library/Audio/Plug-Ins/Components/Guitar\ Rig\ 6.component
-  /Library/Audio/Plug-Ins/VST/Guitar\ Rig\ 6.vst
+  /Library/Audio/Plug-Ins/Components/Guitar\ Rig\ $VERSION.component
+  /Library/Audio/Plug-Ins/VST/Guitar\ Rig\ $VERSION.vst
 )
 dataSupportFiles=(
-  /Library/Application\ Support/Native\ Instruments/Guitar\ Rig\ 6
-  /Library/Application\ Support/Native\ Instruments/Service\ Center/Guitar\ Rig\ 6.xml
+  /Library/Application\ Support/Native\ Instruments/Guitar\ Rig\ $VERSION
+  /Library/Application\ Support/Native\ Instruments/Service\ Center/Guitar\ Rig\ $VERSION.xml
 )
 preferenceFiles=(
-  $HOME/Library/Preferences/com.native-instruments.Guitar\ Rig\ 6.plist
-  $HOME/Library/Application\ Support/Native\ Instruments/Guitar\ Rig\ 6
+  $HOME/Library/Preferences/com.native-instruments.Guitar\ Rig\ $VERSION.plist
+  $HOME/Library/Application\ Support/Native\ Instruments/Guitar\ Rig\ $VERSION
 )
 
 ALLFILES=(
