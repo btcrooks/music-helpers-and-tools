@@ -1,2 +1,2 @@
-# music-helpers-and-tools
+# Audio Production Scripts
 helper scripts and tools for audio production
